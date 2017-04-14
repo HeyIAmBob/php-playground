@@ -1,6 +1,7 @@
 <?php 
 $file = $_GET['file']; 
-$fullPathFile = "case" . DIRECTORY_SEPARATOR . $file; 
+$rootDir = "case";
+$fullPathFile = $rootDir . DIRECTORY_SEPARATOR . $file; 
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +58,7 @@ $fullPathFile = "case" . DIRECTORY_SEPARATOR . $file;
 						<ul class="dropdown-menu">
 							<?php
 
-							$rootDir = "case";
+							
 							$files = scandir($rootDir);
 
 							foreach ($files as $file) 
