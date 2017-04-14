@@ -1,0 +1,9 @@
+<?php
+
+$array = [["test" => "12/01/2017", "aaa" => function($a){$k = explode("/", $a); if(count($k)==3){return $k[2]."-".$k[1]."-".$k[0];}else{return $a;}}]];
+
+foreach ($array as $entry) {
+
+	var_dump( $entry["aaa"]($entry["test"]) );
+
+}
